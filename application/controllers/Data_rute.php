@@ -36,19 +36,32 @@ class Data_rute extends CI_Controller {
              $this->M_rute->insert($data);
              $this->flash_message->success('Tambahkan', 'data-rute');
         }
-        
-       
     }
-
     public function update(){
-        $id_rute = $this->input->post('id_rute', TRUE);
+       
 
-        $data = array(
-            'nama_rute' => $this->input->post('nama_rute', TRUE),
-        );
-      
-        $this->M_rute->update($data, $id_rute);
-        $this->flash_message->success('Update', 'data-rute');
+        $this->form_validation->set_rules('point_start', 'Point Start', 'required');
+        $this->form_validation->set_rules('point_end', 'Point End', 'required');
+        $this->form_validation->set_rules('distance', 'Distance', 'required');
+        $this->form_validation->set_rules('standart_time', 'Standart Time', 'required');
+        $this->form_validation->set_rules('priceperkm', 'Price Per KM', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->index();
+        } else {
+            $id_rute = $this->input->post('id_rute', TRUE);
+            $data = array(
+                'point_start' => $this->input->post('point_start', TRUE),
+                'point_end' => $this->input->post('point_end', TRUE),
+                'distance' => $this->input->post('distance', TRUE),
+                'standart_time' => $this->input->post('standart_time', TRUE),
+                'priceperkm' => $this->input->post('priceperkm', TRUE),
+            );
+     
+            $this->M_rute->update($data, $id_rute);
+            $this->flash_message->success('Update', 'data-rute');
+        }
+        
     }
 
     public function delete($id_rute){       

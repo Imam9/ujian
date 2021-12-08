@@ -10,6 +10,11 @@ class M_rute extends CI_Model {
         return $this->db->get($this->table)->result();  
     }
 
+    public function get_data($id_rute){
+        $this->db->where('id_rute', $id_rute);
+        return $this->db->get($this->table)->row();
+    }
+
     public function get_by_id($id_rute){
         $this->db->where('id_rute', $id_rute);
         return $this->db->get($this->table)->row();

@@ -144,4 +144,6 @@ $autoload['language'] = array();
 $autoload['model'] = array(
     'M_rute',
     'M_driver',
+    'M_transaksi',
+    'M_dashboard',
 );

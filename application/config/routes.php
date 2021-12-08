@@ -56,4 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['dashboard'] = 'dashboard';
 $route['data-driver'] = 'data_driver';
 $route['data-rute'] = 'data_rute';
+$route['data-transaksi'] = 'data_transaksi';
 

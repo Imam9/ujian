@@ -49,6 +49,7 @@
                   <ul class="dropdown-menu">
                     <li class="<?php if($halaman == 'data-driver'){echo 'active';}?>"><a class="nav-link" href="<?= base_url('data-driver')?>">Data Driver</a></li>
                     <li class="<?php if($halaman == 'data-rute'){echo 'active';}?>"><a class="nav-link" href="<?= base_url('data-rute')?>">Data Rute</a></li>
+                    <li class="<?php if($halaman == 'data-transaki'){echo 'active';}?>"><a class="nav-link" href="<?= base_url('data-transaksi')?>">Data Transaksi</a></li>
                   </ul>
                 </li>
               </ul>

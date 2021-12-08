@@ -36,7 +36,7 @@
                     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updatedata<?= $value->id_rute ?>">
                       <i class="fas fa-edit"></i>
                     </button>
-                    <a href="<?= base_url('admin/data_rute_admin/delete/' . $value->id_rute) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                    <a href="<?= base_url('data_rute/delete/' . $value->id_rute) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                   </td>
                 </tr>
               <?php endforeach; ?>
@@ -102,9 +102,10 @@ foreach ($data_rute as $key => $value) :?>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="<?= base_url('admin/data_rute_admin/update') ?>" method="post">
+      <form action="<?= base_url('data_rute/update') ?>" method="post">
         <div class="modal-body">
           <div class="form-group">
+            <input type="hidden" name = "id_rute" value = "<?= $value->id_rute?>">
             <label for="">Point Start</label>
             <input type="text" name="point_start" id="" class="form-control" value = "<?= $value->point_start?>">
           </div>
