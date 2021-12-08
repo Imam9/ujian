@@ -71,7 +71,7 @@
           </div>
           <div class="form-group">
             <label for="">Distance</label>
-            <input type="number" name="point_start" id="" class="form-control" required>
+            <input type="number" name="distance" id="" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="">Standart Time</label>

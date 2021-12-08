@@ -18,12 +18,19 @@ class Data_rute extends CI_Controller {
         
         $this->form_validation->set_rules('point_start', 'Point Start', 'required');
         $this->form_validation->set_rules('point_end', 'Point End', 'required');
+        $this->form_validation->set_rules('distance', 'Distance', 'required');
+        $this->form_validation->set_rules('standart_time', 'Standart Time', 'required');
+        $this->form_validation->set_rules('priceperkm', 'Price Per KM', 'required');
 
         if ($this->form_validation->run() == FALSE) {
             $this->index();
         } else {
             $data = array(
-                'nama_rute' => $this->input->post('nama_rute', TRUE),
+                'point_start' => $this->input->post('point_start', TRUE),
+                'point_end' => $this->input->post('point_end', TRUE),
+                'distance' => $this->input->post('distance', TRUE),
+                'standart_time' => $this->input->post('standart_time', TRUE),
+                'priceperkm' => $this->input->post('priceperkm', TRUE),
             );
      
              $this->M_rute->insert($data);
