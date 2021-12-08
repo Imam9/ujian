@@ -105,9 +105,24 @@ foreach ($data_rute as $key => $value) :?>
       <form action="<?= base_url('admin/data_rute_admin/update') ?>" method="post">
         <div class="modal-body">
           <div class="form-group">
-            <label for="">Nama rute</label>
-            <input type="hidden" name ="id_rute" value ="<?= $value->id_rute?>">
-            <input type="text" name="nama_rute" id="" class="form-control" value ="<?= $value->nama_rute?>">
+            <label for="">Point Start</label>
+            <input type="text" name="point_start" id="" class="form-control" value = "<?= $value->point_start?>">
+          </div>
+          <div class="form-group">
+            <label for="">Point End</label>
+            <input type="text" name="point_end" id="" class="form-control" value = "<?= $value->point_end?>">
+          </div>
+          <div class="form-group">
+            <label for="">Distance</label>
+            <input type="number" name="distance" id="" class="form-control" value = "<?= $value->distance?>">
+          </div>
+          <div class="form-group">
+            <label for="">Standart Time</label>
+            <input type="number" name="standart_time" id="" class="form-control" value = "<?= $value->standart_time?>">
+          </div>
+          <div class="form-group">
+            <label for="">Price Per Km</label>
+            <input type="number" name="priceperkm" id="" class="form-control" value = "<?= $value->priceperkm?>">
           </div>
         </div>
         <div class="modal-footer">
